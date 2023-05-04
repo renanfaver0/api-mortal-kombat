@@ -1,0 +1,36 @@
+﻿<Properties StartupConfiguration="{B9B6E17E-FDED-4268-8EFC-59EFAD5D668C}|https">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="MortalKombatApi/Controllers/CharacterController.cs">
+    <Files>
+      <File FileName="MortalKombatApi/Controllers/CharacterController.cs" Line="48" Column="10" />
+      <File FileName="MortalKombatApi/Services/CharacterService/ICharacterService.cs" Line="8" Column="19" />
+      <File FileName="MortalKombatApi/Program.cs" Line="15" Column="27" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="MortalKombatApi" expanded="True">
+            <Node name="MortalKombatApi" expanded="True">
+              <Node name="Dependencies" expanded="True" />
+              <Node name="Controllers" expanded="True">
+                <Node name="CharacterController.cs" selected="True" />
+              </Node>
+              <Node name="Models" expanded="True" />
+              <Node name="Properties" expanded="True" />
+              <Node name="Services" expanded="True">
+                <Node name="CharacterService" expanded="True" />
+              </Node>
+              <Node name="appsettings.json" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.MortalKombatApi PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MultiItemStartupConfigurations />
+</Properties>
