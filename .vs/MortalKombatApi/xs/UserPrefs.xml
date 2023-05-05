@@ -1,28 +1,15 @@
 ﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{B9B6E17E-FDED-4268-8EFC-59EFAD5D668C}|https">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="MortalKombatApi/Migrations/DataContextModelSnapshot.cs">
-    <Files>
-      <File FileName="MortalKombatApi/Controllers/CharacterController.cs" Line="72" Column="2" />
-      <File FileName="MortalKombatApi/Services/CharacterService/ICharacterService.cs" Line="14" Column="50" />
-      <File FileName="MortalKombatApi/Program.cs" Line="25" Column="2" />
-      <File FileName="MortalKombatApi/Models/Character.cs" Line="21" Column="1" />
-      <File FileName="MortalKombatApi/Services/CharacterService/CharacterService.cs" Line="1" Column="1" />
-      <File FileName="MortalKombatApi/Data/DataContext.cs" Line="29" Column="6" />
-      <File FileName="MortalKombatApi/Migrations/20230504210205_InitialCreate.cs" Line="23" Column="1" />
-      <File FileName="MortalKombatApi/Migrations/DataContextModelSnapshot.cs" Line="1" Column="1" />
-    </Files>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="MortalKombatApi" expanded="True">
+          <Node name="MortalKombatApi" expanded="True" selected="True">
             <Node name="MortalKombatApi" expanded="True">
               <Node name="Dependencies" expanded="True" />
               <Node name="Controllers" expanded="True" />
               <Node name="Data" expanded="True" />
-              <Node name="Migrations" expanded="True">
-                <Node name="DataContextModelSnapshot.cs" selected="True" />
-              </Node>
+              <Node name="Migrations" expanded="True" />
               <Node name="Models" expanded="True" />
               <Node name="Properties" expanded="True" />
               <Node name="Services" expanded="True">
@@ -35,7 +22,10 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints />
   <MonoDevelop.Ide.ItemProperties.MortalKombatApi PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>
