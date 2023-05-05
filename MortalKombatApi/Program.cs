@@ -1,5 +1,7 @@
 ﻿// Using global models
 global using MortalKombatApi.Models;
+global using MortalKombatApi.Data;
+
 using MortalKombatApi.Services.CharacterService;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,6 +13,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<ICharacterService, CharacterService>();
+builder.Services.AddDbContext<DataContext>();
 
 var app = builder.Build();
 

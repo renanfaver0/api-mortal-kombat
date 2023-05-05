@@ -3,15 +3,15 @@ namespace MortalKombatApi.Services.CharacterService
 {
 	public interface ICharacterService
 	{
-        List<Character> GetAllCharacters();
+        Task<List<Character>> GetAllCharacters();
 
-        Character? GetSingleCharacter(int id);
+        Task<Character?> GetSingleCharacter(int id);
 
-        List<Character> AddCharacter(Character character);
+        Task<List<Character>> AddCharacter(Character character);
 
-        List<Character>? UpdateCharacter(int id, Character request);
+        Task<List<Character>?> UpdateCharacter(int id, Character request);
 
-        List<Character>? DeleteCharacter(int id);
+        Task<List<Character>?> DeleteCharacter(int id);
     }
 }
 

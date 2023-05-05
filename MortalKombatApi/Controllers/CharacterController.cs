@@ -24,45 +24,49 @@ namespace MortalKombatApi.Controllers
 
         public async Task<ActionResult<List<Character>>> GetAllCharacters()
         {
-            return _characterService.GetAllCharacters();
+            return await _characterService.GetAllCharacters();
         }
+
 
         // GET: api/characters by id
         [HttpGet("{id}")]
 
         public async Task<ActionResult<Character>> GetSingleCharacter(int id)
         {
-            var result = _characterService.GetSingleCharacter(id);
+            var result = await _characterService.GetSingleCharacter(id);
             if (result is null)
                 return NotFound("Character not found");
 
             return Ok(result);
         }
 
+        // POST: add characters on api
         [HttpPost]
 
         public async Task<ActionResult<List<Character>>> AddCharacter(Character character)
         {
-            var result = _characterService.AddCharacter(character);
+            var result = await _characterService.AddCharacter(character);
             return Ok(result);
         }
 
+        // PUT: Update characters on api
         [HttpPut("{id}")]
 
         public async Task<ActionResult<List<Character>>> UpdateCharacter(int id, Character request)
         {
-            var result = _characterService.UpdateCharacter(id, request);
+            var result = await _characterService.UpdateCharacter(id, request);
             if (result is null)
                 return NotFound("Character not found");
 
             return Ok(result);
         }
 
+        // DELETE: Delete characters on api
         [HttpDelete("{id}")]
 
         public async Task<ActionResult<List<Character>>> DeleteCharacter(int id)
         {
-            var result = _characterService.DeleteCharacter(id);
+            var result = await _characterService.DeleteCharacter(id);
             if (result is null)
                 return NotFound("Character not found!");
 

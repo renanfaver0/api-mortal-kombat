@@ -1,59 +1,50 @@
 ﻿using System;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using MortalKombatApi.Models;
 
 namespace MortalKombatApi.Services.CharacterService
 {
     public class CharacterService : ICharacterService
     {
-        private static List<Character> characters = new List<Character>
-        { 
-           new Character
-           {
-              Id = 1,
-              Name = "Subzero",
-              FirstName = "Kuai",
-              LastName = "Liang",
-              Sex = "Male",
-              Skill = "Ice"
+        private readonly DataContext _context;
 
-           },
-           new Character
-           {
-              Id = 2,
-              Name = "Scorpion",
-              FirstName = "Hanzo",
-              LastName = "Hasashi",
-              Sex = "Male",
-              Skill = "Snake"
-
-           }
-         };
-
-        public List<Character> AddCharacter(Character character)
+        public CharacterService(DataContext context)
         {
-            characters.Add(character);
-            return characters;
+            _context = context;
         }
 
-        public List<Character>? DeleteCharacter(int id)
+
+        public async Task<List<Character>> AddCharacter(Character character)
         {
-            var character = characters.Find(x => x.Id == id);
+            _context.Characters.Add(character);
+            await _context.SaveChangesAsync();
+
+            return await _context.Characters.ToListAsync();
+        }
+
+        public async Task<List<Character>?> DeleteCharacter(int id)
+        {
+            var character = await _context.Characters.FindAsync(id);
             if (character is null)
                 return null;
 
-            characters.Remove(character);
+            _context.Characters.Remove(character);
+            await _context.SaveChangesAsync();
+
+            return await _context.Characters.ToListAsync();
+        }
+
+        public async Task <List<Character>> GetAllCharacters()
+        {
+            var characters = await _context.Characters.ToListAsync();
+
             return characters;
         }
 
-        public List<Character> GetAllCharacters()
+        public async Task<Character?> GetSingleCharacter(int id)
         {
-            return characters;
-        }
-
-        public Character? GetSingleCharacter(int id)
-        {
-            var character = characters.Find(x => x.Id == id);
+            var character = await _context.Characters.FindAsync(id);
             if (character is null)
                 return null;
 
@@ -61,9 +52,9 @@ namespace MortalKombatApi.Services.CharacterService
 
         }
 
-        public List<Character>? UpdateCharacter(int id, Character request)
+        public async Task<List<Character>?> UpdateCharacter(int id, Character request)
         {
-            var character = characters.Find(x => x.Id == id);
+            var character = await _context.Characters.FindAsync(id);
             if (character is null)
                 return null;
 
@@ -73,7 +64,9 @@ namespace MortalKombatApi.Services.CharacterService
                 character.Sex = request.Sex;
                 character.Skill = request.Skill;
 
-            return characters;
+                await _context.SaveChangesAsync();
+
+            return await _context.Characters.ToListAsync();
         }
     }
 }
